@@ -1,5 +1,5 @@
 {
-  "name": "auto-changelog",
+  "name": "@iesde/auto-changelog",
   "version": "2.1.0",
   "description": "Command line tool for generating a changelog from git tags and commit history",
   "main": "./src/index.js",
