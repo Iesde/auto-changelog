@@ -4,7 +4,7 @@ const { cmd } = require('./utils')
 const DIVIDER = '---'
 
 async function fetchTags (options) {
-  const tags = (await cmd(`git tag -l --sort=-creatordate --format=%(refname:short)${DIVIDER}%(creatordate:short)`))
+  const tags = (await cmd(`git for-each-ref --format=%(refname:short)${DIVIDER}%(creatordate:short) refs/tags/*`))
     .trim()
     .split('\n')
     .map(parseTag)
